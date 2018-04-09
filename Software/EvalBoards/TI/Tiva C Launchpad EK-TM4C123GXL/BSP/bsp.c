@@ -82,7 +82,20 @@ void  BSP_Init (void)
     GPIOPinConfigure(GPIO_PA0_U0RX);
     GPIOPinConfigure(GPIO_PA1_U0TX);
     GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+	
+	
+	
+		SysCtlPeripheralEnable(SYSCTL_PERIPH_UART2);
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOD);
+    GPIOPinConfigure(GPIO_PD6_U2RX);
+    GPIOPinConfigure(GPIO_PD7_U2TX);
+    GPIOPinTypeUART(GPIO_PORTD_BASE, GPIO_PIN_6 | GPIO_PIN_7);
+	
+	
+		UARTConfigSetExpClk(UART2_BASE,SysCtlClockGet(),115200,UART_CONFIG_WLEN_8);
+	
 		UARTStdioConfig(0, 115200, BSP_SysClkFreqGet()); 
+		//UARTStdioConfig(2, 9600, BSP_SysClkFreqGet()); 
 	
 		GPIOPinTypeGPIOInput(GPIO_PORTF_BASE, GPIO_PIN_4|GPIO_PIN_0);
 		GPIOPadConfigSet(GPIO_PORTF_BASE,GPIO_PIN_0 | GPIO_PIN_4, GPIO_STRENGTH_8MA,GPIO_PIN_TYPE_STD_WPU);

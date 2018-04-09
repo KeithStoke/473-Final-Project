@@ -108,6 +108,12 @@ static  OS_EVENT* mySem;
 static  OS_TCB* task1TCB;
 static  OS_TCB* task2TCB;
 
+static 	OS_TCB* curTCB;
+
+
+int 		column4TCB;
+int 		column5TCB;
+	char name[4] = "ABCD";
 /*
 *********************************************************************************************************
 *                                            LOCAL MACRO'S
@@ -252,7 +258,8 @@ static  void  AppTaskStart (void *p_arg)
 		BSP_LED_Toggle(2);
 
 		OSTimeDlyHMSM(0, 0, 1, 0);   
-
+		column4TCB = 3;
+		column5TCB = 3;
 		AppTaskCreate();                                            /* Creates all the necessary application tasks.         */
 
     while (DEF_ON) {
@@ -281,31 +288,36 @@ static  void  AppTaskStart (void *p_arg)
 
 static  void  AppTaskCreate (void)
 {
-OSTaskCreate((void (*)(void *)) Task1,           /* Create the second task                                */
+
+	
+OSTaskCreate((void (*)(void *)) Task1,          
                     (void           *) 0,							// argument
                     (OS_STK         *)&Task1Stk[APP_CFG_TASK_START_STK_SIZE - 1],
                     (INT8U           ) 5 );  						// Task Priority
                 
 
-OSTaskCreate((void (*)(void *)) UpdateBlinkRate,           /* Create the second task                                */
+OSTaskCreate((void (*)(void *)) UpdateBlinkRate,          
                     (void           *) 0,							// argument
                     (OS_STK         *)&Task2Stk[APP_CFG_TASK_START_STK_SIZE - 1],
                     (INT8U           ) 6 );  						// Task Priority
  
-OSTaskCreate((void (*)(void *)) Task2,           /* Create the second task                                */
+OSTaskCreate((void (*)(void *)) Task2,         
                     (void           *) 0,							// argument
                     (OS_STK         *)&Task3Stk[APP_CFG_TASK_START_STK_SIZE - 1],
                     (INT8U           ) 7 );  						// Task Priority	
 										
-OSTaskCreate((void (*)(void *)) HeartBeat,           /* Create the second task                                */
+OSTaskCreate((void (*)(void *)) HeartBeat,         
                     (void           *) 0,							// argument
                     (OS_STK         *)&BeatStk[APP_CFG_TASK_START_STK_SIZE - 1],
                     (INT8U           ) 9 );  						// Task Priority	
+											
+
 																		
-OSTaskCreate((void (*)(void *)) SerialTerminal,           /* Create the second task                                */
+OSTaskCreate((void (*)(void *)) SerialTerminal,          
                     (void           *) 0,							// argument
                     (OS_STK         *)&SerialStk[APP_CFG_TASK_START_STK_SIZE - 1],
-                    (INT8U           ) 10 );  						// Task Priority												
+                    (INT8U           ) 10 );  						// Task Priority		
+								
 }
 
 
@@ -317,7 +329,7 @@ static  void  Task1 (void *p_arg)
 		task1TCB = OSTCBCur;
     while (1) {              
         BSP_LED_Toggle(1);
-				UARTprintf("T1 ");	// Probably needs to be protected by semaphore
+				//UARTprintf("T1 ");	// Probably needs to be protected by semaphore
 				if( OSFlagAccept(myGroup,SW1_PRESSED,OS_FLAG_WAIT_SET_ANY + OS_FLAG_CONSUME,0) == SW1_PRESSED )
 				{
 					rate = rand() % 1000;
@@ -335,7 +347,7 @@ static  void  Task2 (void *p_arg)
 	  task2TCB = OSTCBCur;
     while (1) {              
         BSP_LED_Toggle(2);
-  			UARTprintf("T2 ");  // Probably needs to be protected by semaphore
+  			//UARTprintf("T2 ");  // Probably needs to be protected by semaphore
 			
 			if( OSFlagAccept(myGroup,SW1_PRESSED,OS_FLAG_WAIT_SET_ANY + OS_FLAG_CONSUME,0) == SW1_PRESSED )
 				{
@@ -375,50 +387,268 @@ static  void  HeartBeat(void *p_arg)
 	
     while (1) {
 				OSSemPend(mySem,0,0);
-        UARTprintf("\n Pulse \n");
+        //UARTprintf("\n Pulse \n");
 				OSSemPost(mySem);
         OSTimeDlyHMSM(0, 0, 0, 500);
 			}
 }
 
+
+void myUPrintf(char* input)
+{
+	char temp;
+	int i =0;
+	while(input[i] != 0)
+	{
+		
+		UARTCharPut(UART2_BASE,input[i]);
+		i++;
+	}
+}
+
+void tabOver(int nTabs)
+{
+	int i;
+	for(i=0;i<nTabs;i++)
+	{
+		UARTprintf("\x09");
+	}
+}
+
+
+void returnTable(int nlines)//Returns to top of table depending on number of lines that the function has printed
+{
+	int i;
+	for(i=0;i<nlines+1;i++)
+	{
+		UARTprintf("\x1bM");
+	}
+	UARTprintf("\x0a");
+}
+
+
+void printColumn1()
+{
+	UARTprintf("\nOSCPUUsage");
+	UARTprintf("\n%3d",OSCPUUsage);
+	
+  UARTprintf("\n\nOSCtxSwCtr");
+	UARTprintf("\n%d",OSCtxSwCtr);
+	
+	
+	returnTable(5);
+}
+
+void printColumn2()
+{
+
+}
+
+void printColumn3()
+{
+	OS_TCB* firstTCB = OSTCBList;
+	int linecnt = 0;
+	int i;
+	curTCB = firstTCB; //Pointer to the First User Entry of the TCB table
+	
+	UARTprintf("\n");
+	linecnt++;
+	tabOver(4);
+	UARTprintf("Ready Tasks");
+	
+	
+
+	
+	do //Never thought a do while loop would be useful
+	{
+		if(curTCB->OSTCBStat == OS_STAT_RDY)
+		{
+			tabOver(4);
+			UARTprintf("%d\n",curTCB->OSTCBPrio);
+			linecnt++;
+		}
+		curTCB = curTCB->OSTCBNext;
+	}while(curTCB != (OS_TCB *)0);
+	
+	
+	
+	curTCB = firstTCB;
+	UARTprintf("\n");
+	linecnt++;
+	tabOver(4);
+	
+	UARTprintf("Pending Tasks");
+	do //Never thought a do while loop would be useful
+	{
+		if(curTCB->OSTCBStat == OS_STAT_PEND_ANY)
+		{
+			tabOver(4);
+			UARTprintf("%d\n",curTCB->OSTCBPrio);
+			linecnt++;
+		}
+		curTCB = curTCB->OSTCBNext;
+	}while(curTCB != (OS_TCB *)0);
+	
+	
+	
+	curTCB = firstTCB;
+	UARTprintf("\n");
+	linecnt++;
+	tabOver(4);
+	UARTprintf("Suspended Tasks");
+	do //Never thought a do while loop would be useful
+	{
+		if(curTCB->OSTCBStat == OS_STAT_SUSPEND)
+		{
+			tabOver(4);
+			UARTprintf("%d\n",curTCB->OSTCBPrio);
+			linecnt++;
+		}
+		curTCB = curTCB->OSTCBNext;
+	}while(curTCB != (OS_TCB *)0);
+	
+	
+	returnTable(linecnt);
+}
+
+
+void printColumn4()
+{
+	curTCB = &OSTCBTbl[column4TCB];
+	//curTCB = curTCB->OSTCBNext;
+	if (curTCB != (OS_TCB *)0) //Check if the task exsists
+			{
+	UARTprintf("\n");
+	tabOver(6);
+	UARTprintf("Task Priority");
+	UARTprintf("\n");
+	tabOver(6);
+	UARTprintf("%10d",curTCB->OSTCBPrio);
+	UARTprintf("\n\n");
+	tabOver(6);
+	UARTprintf("Task CtxSwCtr");
+	UARTprintf("\n");
+	tabOver(6);
+	UARTprintf("%10d",curTCB->OSTCBCtxSwCtr);
+	returnTable(5);
+			}
+}
+
+
+
+void printColumn5()
+{
+	
+	curTCB = &OSTCBTbl[column5TCB];
+	if (curTCB != (OS_TCB *)0) //Check if the task exsists
+			{
+	UARTprintf("\n");
+	tabOver(8);
+	UARTprintf("Task Priority");
+	UARTprintf("\n");
+	tabOver(8);
+	UARTprintf("%10d",curTCB->OSTCBPrio);
+	UARTprintf("\n\n");
+	tabOver(8);
+	UARTprintf("Task CtxSwCtr");
+	UARTprintf("\n");
+	tabOver(8);
+	UARTprintf("%10d",curTCB->OSTCBCtxSwCtr);
+	returnTable(5);
+			}
+}
+
+void printClms()
+{
+	//Prints the column outlines
+	int i,j;
+	/*
+	UARTprintf("Button 1 pressed\n");
+	UARTprintf("\x07 bell tone\n");
+	UARTprintf("\n\n\n\n\n");
+	UARTprintf("Line 1");
+	UARTprintf("\n\x1bM\x1bMLine 2");
+	UARTprintf("\x1bM\x1bMLine 3");
+	UARTprintf("\x0dLine 4");
+	UARTprintf("\x09Line 5");
+	UARTprintf("\x09Line 6");
+	UARTprintf("\x0b\x0b\x0bLine 7");
+	UARTprintf("\n\x1bM\x1bM\x1bM\x1bM\x1bM\x1bM\x1bM\x1bM\x1bM\x1bMLine 8");
+	*/
+	//UARTStdioConfig(4, 921600, BSP_SysClkFreqGet());
+	//UARTStdioConfig(0, 921600, BSP_SysClkFreqGet());
+	for(j=0;j<5;j++)
+	{
+		
+	UARTprintf(" Col%d",j+1);
+	UARTprintf("\x09");
+	UARTprintf("\x09");
+	UARTprintf("\x08");
+	for( i=0;i<20;i++)
+	{
+		UARTprintf("\xb3\x0b\x08");	
+	}
+	
+	for( i=0;i<20;i++)
+	{
+		UARTprintf("\x1bM");	
+	}
+	}
+	UARTprintf("\x1bM\x0a");//Returns Cursor to the first line for printing
+	
+	printColumn1();
+	printColumn2();
+	printColumn3();
+	printColumn4();
+	printColumn5();
+}
+
+
+void chkUART()
+{
+	char chk;
+	if(UARTCharsAvail(UART0_BASE))
+	{
+		chk = UARTgetc();
+		switch (chk)
+		{
+			case 'w':
+				if(OSTCBTbl[column4TCB].OSTCBPrev != (OS_TCB*) 0)
+				column4TCB++;
+			break;
+			
+			case 's':
+				if(column4TCB ==0)
+					column4TCB++;
+				column4TCB--;
+			break;
+			
+			case 'r':
+				if(OSTCBTbl[column5TCB].OSTCBPrev != (OS_TCB*) 0)
+				column5TCB++;
+			break;
+			
+			case 'f':
+				if(column5TCB ==0)
+					column5TCB++;
+				column5TCB--;
+			break;
+		}	
+	}
+}
+
+
 static  void  SerialTerminal (void *p_arg)
 {
-		int* task1rate;
-		int* task2rate;
-		
-		int test=0;
+	char str[16];
    (void)p_arg;
-		
-    while (1) {              
-        
-			task1rate = (int*)OSMboxAccept(task1mail);
-				
-			task2rate = (int*)OSMboxAccept(task2mail);
-		
-			if ( task1rate != (void*) 0 )
-			{
-				OSSemPend(mySem,0,0);
-				UARTprintf("\nTask1 New Rate = %d\n",*task1rate);
-				OSSemPost(mySem);
-			}
-			
-			
-			
-			if ( task2rate != (void*) 0 )
-			{
-				OSSemPend(mySem,0,0);
-				UARTprintf("\nTask2 New Rate = %d\n",*task2rate);
-				OSSemPost(mySem);
-			}
-			
-			
-			if ( task1rate == (void*) 0 && task2rate == (void*) 0 )
-			{
-				OSSemPend(mySem,0,0);
-				test = OSCPUUsage;
-				UARTprintf("\n\n CPU Usage: %d percent\n Context Switches: %d \n Idle Counter: %d \n Times Blinky1 Switched: %d \n Times Blinky2 Switched: %d\n\n",test,OSCtxSwCtr,OSIdleCtr,task1TCB->OSTCBCtxSwCtr,task2TCB->OSTCBCtxSwCtr );
-				OSSemPost(mySem);
-			}
-			OSTimeDlyHMSM(0, 0, 0, 1000);
+
+    while (1) 
+			{            				
+				printClms();
+				chkUART();
+				//sprintf(str,"Hello World");
+				//myUPrintf(str);
+				OSTimeDlyHMSM(0, 0, 0, 10);
 			}
 }
