@@ -1,5 +1,5 @@
 Dependencies for Project 'OS2', Target 'FLASH': (DO NOT MODIFY !)
-F (..\app.c)(0x5ACBA7CD)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork -I ..\ -I ..\..\BSP -I ..\..\..\..\..\uC-CPU -I ..\..\..\..\..\uC-CPU\ARM-Cortex-M4\RealView -I ..\..\..\..\..\uC-LIB -I ..\..\..\..\..\uCOS-II\Ports\ARM-Cortex-M4\Generic\RealView -I ..\..\..\..\..\uCOS-II\Source-I.\RTE\_FLASH-IC:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DTM4C123GH6PM-o .\flash\app.o --omf_browse .\flash\app.crf --depend .\flash\app.d)
+F (..\app.c)(0x5ACCD574)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork -I ..\ -I ..\..\BSP -I ..\..\..\..\..\uC-CPU -I ..\..\..\..\..\uC-CPU\ARM-Cortex-M4\RealView -I ..\..\..\..\..\uC-LIB -I ..\..\..\..\..\uCOS-II\Ports\ARM-Cortex-M4\Generic\RealView -I ..\..\..\..\..\uCOS-II\Source-I.\RTE\_FLASH-IC:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DTM4C123GH6PM-o .\flash\app.o --omf_browse .\flash\app.crf --depend .\flash\app.d)
 I (..\app_cfg.h)(0x5AC794F7)
 I (..\..\..\..\..\uC-CPU\cpu_core.h)(0x5AC794FA)
 I (..\..\..\..\..\uC-CPU\ARM-Cortex-M4\RealView\cpu.h)(0x5AC794FB)

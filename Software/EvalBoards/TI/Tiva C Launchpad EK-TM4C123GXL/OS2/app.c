@@ -109,10 +109,12 @@ static  OS_TCB* task1TCB;
 static  OS_TCB* task2TCB;
 
 static 	OS_TCB* curTCB;
+static  OS_EVENT* curEVT;
 
 
 int 		column4TCB;
 int 		column5TCB;
+int 		column2TCB;
 	char name[4] = "ABCD";
 /*
 *********************************************************************************************************
@@ -260,6 +262,7 @@ static  void  AppTaskStart (void *p_arg)
 		OSTimeDlyHMSM(0, 0, 1, 0);   
 		column4TCB = 3;
 		column5TCB = 3;
+		column2TCB = 0;
 		AppTaskCreate();                                            /* Creates all the necessary application tasks.         */
 
     while (DEF_ON) {
@@ -441,7 +444,46 @@ void printColumn1()
 
 void printColumn2()
 {
-
+	
+	
+	int linecnt = 0;
+	curEVT = &OSEventTbl[column2TCB];
+	UARTprintf("\n");
+	linecnt++;
+	tabOver(2);
+	UARTprintf("Event Group\n");
+	linecnt++;
+	tabOver(2);
+	UARTprintf("%3d\n",curEVT->OSEventGrp);
+	linecnt++;
+	tabOver(2);
+	UARTprintf("\nEvent Type\n");
+	tabOver(2);
+	linecnt+=2;
+	if(curEVT->OSEventType == OS_EVENT_TYPE_FLAG)
+	{
+		UARTprintf("Event Flag");
+	}
+	else if(curEVT->OSEventType == OS_EVENT_TYPE_MBOX)
+	{
+		UARTprintf("Mailbox");
+	}
+	else if(curEVT->OSEventType == OS_EVENT_TYPE_SEM)
+	{
+		UARTprintf("Semaphore");
+	}
+	else if(curEVT->OSEventType == OS_EVENT_TYPE_MUTEX)
+	{
+		UARTprintf("Mutex");
+	}
+	
+	UARTprintf("\n");
+	tabOver(2);
+	linecnt++;
+	UARTprintf("Tasks waiting\n");
+	tabOver(2);
+	linecnt++;
+	returnTable(linecnt);
 }
 
 void printColumn3()
@@ -633,6 +675,15 @@ void chkUART()
 					column5TCB++;
 				column5TCB--;
 			break;
+				
+			case 'q':
+				column2TCB++;
+			break;
+			
+			case 'a':
+				column2TCB--;
+			break;
+			
 		}	
 	}
 }
