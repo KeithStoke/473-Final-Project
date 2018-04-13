@@ -9,6 +9,7 @@ Project File Date:  04/08/2018
 <h2>Output:</h2>
 Rebuild target 'FLASH'
 compiling app.c...
+<<<<<<< HEAD
 ..\app.c(402): warning:  #177-D: variable "temp" was declared but never referenced
         char temp;
 ..\app.c(493): warning:  #177-D: variable "i" was declared but never referenced
@@ -16,6 +17,15 @@ compiling app.c...
 ..\app.c(694): warning:  #177-D: variable "str" was declared but never referenced
         char str[16];
 ..\app.c(108): warning:  #550-D: variable "task1TCB" was set but never used
+=======
+..\app.c(402): warning:  #177-D: variable "temp"  was declared but never referenced
+  	char temp;
+..\app.c(499): warning:  #177-D: variable "i"  was declared but never referenced
+  	int i;
+..\app.c(701): warning:  #177-D: variable "str"  was declared but never referenced
+  	char str[16];
+..\app.c(108): warning:  #550-D: variable "task1TCB"  was set but never used
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
   static  OS_TCB* task1TCB;
 ..\app.c(109): warning:  #550-D: variable "task2TCB" was set but never used
   static  OS_TCB* task2TCB;
@@ -89,6 +99,7 @@ compiling usb.c...
 compiling watchdog.c...
 compiling uartstdio.c...
 linking...
+<<<<<<< HEAD
 Program Size: Code=23506 RO-data=2006 RW-data=1644 ZI-data=12388  
 ".\Flash\OS2.axf" - 0 Error(s), 11 Warning(s).
 Load "C:\\Users\\Jeanna\\Documents\\GitHub\\473-Final-Project\\Software\\EvalBoards\\TI\\Tiva C Launchpad EK-TM4C123GXL\\OS2\\KeilMDK\\Flash\\OS2.axf" 
@@ -101,6 +112,24 @@ Connecting: Mode=JTAG, Speed=1000000Hz
 Erase Done.
 Programming Done.
 Verify OK.
+=======
+Program Size: Code=23626 RO-data=2006 RW-data=1644 ZI-data=12388  
+".\Flash\OS2.axf" - 0 Error(s), 5 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.TM4C_DFP.1.1.0.pack
+                Keil.TM4C_DFP.1.1.0
+                Texas Instruments Tiva C Series Device Support and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_FLASH
+  C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:01
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </pre>
 </body>
 </html>
