@@ -311,7 +311,7 @@ OSTaskCreate((void (*)(void *)) Task2,
 OSTaskCreate((void (*)(void *)) HeartBeat,         
                     (void           *) 0,							// argument
                     (OS_STK         *)&BeatStk[APP_CFG_TASK_START_STK_SIZE - 1],
-                    (INT8U           ) 12 );  						// Task Priority	
+                    (INT8U           ) 9 );  						// Task Priority	
 											
 
 																		
@@ -431,34 +431,31 @@ void printColumn1()
 	returnTable(5);
 }
 
-
-
 void printColumn2()
 {
 	
 	
 	int linecnt = 0;
 	curEVT = &OSEventTbl[column2TCB];
-	//curEVT = &myGroup;
 	UARTprintf("\n");
 	linecnt++;
 	tabOver(2);
-	UARTprintf("Event Number\n");
+	UARTprintf("Event Group\n");
 	linecnt++;
 	tabOver(2);
-	UARTprintf("%3d\n",column2TCB);
+	UARTprintf("%3d\n",curEVT->OSEventGrp);
 	linecnt++;
 	tabOver(2);
-	UARTprintf("Event Type\n");
+	UARTprintf("\nEvent Type\n");
 	tabOver(2);
-	linecnt++;
+	linecnt+=2;
 	if(curEVT->OSEventType == OS_EVENT_TYPE_FLAG)
 	{
 		UARTprintf("Event Flag");
 	}
 	else if(curEVT->OSEventType == OS_EVENT_TYPE_MBOX)
 	{
-		UARTprintf("  Mailbox");
+		UARTprintf("Mailbox");
 	}
 	else if(curEVT->OSEventType == OS_EVENT_TYPE_SEM)
 	{
@@ -466,7 +463,7 @@ void printColumn2()
 	}
 	else if(curEVT->OSEventType == OS_EVENT_TYPE_MUTEX)
 	{
-		UARTprintf("    Mutex");
+		UARTprintf("Mutex");
 	}
 	
 	UARTprintf("\n");
@@ -475,11 +472,6 @@ void printColumn2()
 	UARTprintf("Tasks waiting\n");
 	tabOver(2);
 	linecnt++;
-	
-	UARTprintf("\n\n\n");
-	linecnt+=3;
-	tabOver(2);
-	UARTprintf("<--A       Q-->");
 	returnTable(linecnt);
 }
 
@@ -489,8 +481,6 @@ void printColumn3()
 	int linecnt = 0;
 	int i;
 	curTCB = firstTCB; //Pointer to the First User Entry of the TCB table
-	
-	
 	
 	UARTprintf("\n");
 	linecnt++;
@@ -505,7 +495,7 @@ void printColumn3()
 		if(curTCB->OSTCBStat == OS_STAT_RDY)
 		{
 			tabOver(4);
-			UARTprintf("%3d\n",curTCB->OSTCBPrio);
+			UARTprintf("%d\n",curTCB->OSTCBPrio);
 			linecnt++;
 		}
 		curTCB = curTCB->OSTCBNext;

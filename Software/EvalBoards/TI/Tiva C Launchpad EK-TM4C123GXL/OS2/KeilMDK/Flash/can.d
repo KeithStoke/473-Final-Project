@@ -1,6 +1,6 @@
 .\flash\can.o: ..\..\BSP\driverlib\can.c
-.\flash\can.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\flash\can.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\flash\can.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\flash\can.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\flash\can.o: ..\..\BSP\inc/hw_can.h
 .\flash\can.o: ..\..\BSP\inc/hw_ints.h
 .\flash\can.o: ..\..\BSP\inc/hw_nvic.h

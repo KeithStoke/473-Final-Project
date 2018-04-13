@@ -1,6 +1,6 @@
 .\flash\adc.o: ..\..\BSP\driverlib\adc.c
-.\flash\adc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\flash\adc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\flash\adc.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\flash\adc.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\flash\adc.o: ..\..\BSP\inc/hw_adc.h
 .\flash\adc.o: ..\..\BSP\inc/hw_ints.h
 .\flash\adc.o: ..\..\BSP\inc/hw_memmap.h

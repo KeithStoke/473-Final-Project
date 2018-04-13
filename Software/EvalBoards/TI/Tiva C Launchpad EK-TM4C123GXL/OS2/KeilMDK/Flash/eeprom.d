@@ -1,6 +1,6 @@
 .\flash\eeprom.o: ..\..\BSP\driverlib\eeprom.c
-.\flash\eeprom.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\flash\eeprom.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\flash\eeprom.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\flash\eeprom.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\flash\eeprom.o: ..\..\BSP\inc/hw_eeprom.h
 .\flash\eeprom.o: ..\..\BSP\inc/hw_flash.h
 .\flash\eeprom.o: ..\..\BSP\inc/hw_ints.h

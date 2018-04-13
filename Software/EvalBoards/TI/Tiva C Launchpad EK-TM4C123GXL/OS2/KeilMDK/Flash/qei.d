@@ -1,6 +1,6 @@
 .\flash\qei.o: ..\..\BSP\driverlib\qei.c
-.\flash\qei.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\flash\qei.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\flash\qei.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\flash\qei.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\flash\qei.o: ..\..\BSP\inc/hw_ints.h
 .\flash\qei.o: ..\..\BSP\inc/hw_memmap.h
 .\flash\qei.o: ..\..\BSP\inc/hw_qei.h

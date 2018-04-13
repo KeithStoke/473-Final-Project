@@ -1,6 +1,6 @@
 .\flash\sysctl.o: ..\..\BSP\driverlib\sysctl.c
-.\flash\sysctl.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\flash\sysctl.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\flash\sysctl.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\flash\sysctl.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\flash\sysctl.o: ..\..\BSP\inc/hw_ints.h
 .\flash\sysctl.o: ..\..\BSP\inc/hw_nvic.h
 .\flash\sysctl.o: ..\..\BSP\inc/hw_sysctl.h

@@ -3,7 +3,15 @@
 <title>Static Call Graph - [.\Flash\OS2.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Flash\OS2.axf</H1><HR>
+<<<<<<< HEAD
 <BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Fri Apr 13 13:22:04 2018
+=======
+<<<<<<< HEAD
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Fri Apr 13 11:47:21 2018
+=======
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Wed Apr 11 13:07:40 2018
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
+>>>>>>> a6117ff093240cc24cbb064a4bb44f022a23a833
 <BR><P>
 <H3>Maximum Stack Usage =        176 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1476,7 +1484,15 @@ Global Symbols
 
 <P><STRONG><a name="[1b8]"></a>BSP_LED_On</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, bsp_led.o(.text), UNUSED)
 
+<<<<<<< HEAD
 <P><STRONG><a name="[93]"></a>BSP_LED_Toggle</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, bsp_led.o(.text))
+=======
+<<<<<<< HEAD
+<P><STRONG><a name="[98]"></a>BSP_LED_Toggle</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, bsp_led.o(.text))
+=======
+<P><STRONG><a name="[99]"></a>BSP_LED_Toggle</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, bsp_led.o(.text))
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
+>>>>>>> a6117ff093240cc24cbb064a4bb44f022a23a833
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BSP_LED_Toggle
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskStart
@@ -1649,8 +1665,13 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_CntLeadZeros
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[e0]"></a>CPU_CntLeadZeros64</STRONG> (Thumb, 156 bytes, Stack size 20 bytes, cpu_core.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_CntTrailZeros64
+=======
 <P><STRONG><a name="[e1]"></a>CPU_CntLeadZeros64</STRONG> (Thumb, 152 bytes, Stack size 20 bytes, cpu_core.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_CntTrailZeros64
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 
 <P><STRONG><a name="[dc]"></a>CPU_CntTrailZeros08</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, cpu_core.o(.text), UNUSED)
@@ -1740,20 +1761,47 @@ Global Symbols
 
 <P><STRONG><a name="[1c0]"></a>CPU_BitBandSet</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, cpu_c.o(.text), UNUSED)
 
+<<<<<<< HEAD
+<P><STRONG><a name="[be]"></a>CPU_IntSrcDis</STRONG> (Thumb, 144 bytes, Stack size 16 bytes, cpu_c.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+=======
 <P><STRONG><a name="[bf]"></a>CPU_IntSrcDis</STRONG> (Thumb, 146 bytes, Stack size 16 bytes, cpu_c.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 <BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_IntDis
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[c1]"></a>CPU_IntSrcEn</STRONG> (Thumb, 144 bytes, Stack size 16 bytes, cpu_c.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+=======
 <P><STRONG><a name="[c2]"></a>CPU_IntSrcEn</STRONG> (Thumb, 146 bytes, Stack size 16 bytes, cpu_c.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_IntEn
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[e1]"></a>CPU_IntSrcPendClr</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, cpu_c.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+</UL>
+
+<P><STRONG><a name="[e2]"></a>CPU_IntSrcPrioSet</STRONG> (Thumb, 228 bytes, Stack size 16 bytes, cpu_c.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+</UL>
+
+<P><STRONG><a name="[e3]"></a>CPU_IntSrcPrioGet</STRONG> (Thumb, 196 bytes, Stack size 16 bytes, cpu_c.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+=======
 <P><STRONG><a name="[e2]"></a>CPU_IntSrcPendClr</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, cpu_c.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
@@ -1767,6 +1815,7 @@ Global Symbols
 <P><STRONG><a name="[e4]"></a>CPU_IntSrcPrioGet</STRONG> (Thumb, 200 bytes, Stack size 16 bytes, cpu_c.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 
 <P><STRONG><a name="[1c1]"></a>ASCII_IsAlpha</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, lib_ascii.o(.text), UNUSED)
@@ -1837,11 +1886,23 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_NameClr
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[e7]"></a>Mem_Move</STRONG> (Thumb, 132 bytes, Stack size 8 bytes, lib_mem.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_Copy
+</UL>
+
+<P><STRONG><a name="[1c4]"></a>Mem_Cmp</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, lib_mem.o(.text), UNUSED)
+=======
 <P><STRONG><a name="[e8]"></a>Mem_Move</STRONG> (Thumb, 128 bytes, Stack size 8 bytes, lib_mem.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_Copy
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[1c8]"></a>Mem_Cmp</STRONG> (Thumb, 126 bytes, Stack size 16 bytes, lib_mem.o(.text), UNUSED)
+=======
+<P><STRONG><a name="[1c5]"></a>Mem_Cmp</STRONG> (Thumb, 126 bytes, Stack size 16 bytes, lib_mem.o(.text), UNUSED)
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
+>>>>>>> a6117ff093240cc24cbb064a4bb44f022a23a833
 
 <P><STRONG><a name="[ea]"></a>Mem_HeapAlloc</STRONG> (Thumb, 164 bytes, Stack size 48 bytes, lib_mem.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_SegCalcTotSize
@@ -1896,11 +1957,19 @@ Global Symbols
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[f3]"></a>Mem_PoolBlkFree</STRONG> (Thumb, 208 bytes, Stack size 24 bytes, lib_mem.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_PoolBlkIsValidAddr
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SW_Exception
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+=======
 <P><STRONG><a name="[f4]"></a>Mem_PoolBlkFree</STRONG> (Thumb, 206 bytes, Stack size 24 bytes, lib_mem.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_PoolBlkIsValidAddr
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SW_Exception
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 
 <P><STRONG><a name="[f6]"></a>Mem_PoolBlkIxGet</STRONG> (Thumb, 186 bytes, Stack size 32 bytes, lib_mem.o(.text), UNUSED)
@@ -1978,8 +2047,13 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Str_Char_Last_N
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[104]"></a>Str_Char_Replace_N</STRONG> (Thumb, 42 bytes, Stack size 12 bytes, lib_str.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Str_Char_Replace
+=======
 <P><STRONG><a name="[105]"></a>Str_Char_Replace_N</STRONG> (Thumb, 40 bytes, Stack size 12 bytes, lib_str.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Str_Char_Replace
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 
 <P><STRONG><a name="[104]"></a>Str_Char_Replace</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lib_str.o(.text), UNUSED)
@@ -2017,11 +2091,19 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_Move
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[115]"></a>OS_StrLen</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, os_core.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemNameGet
+<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagNameGet
+<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSEventNameGet
+<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskNameGet
+=======
 <P><STRONG><a name="[116]"></a>OS_StrLen</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, os_core.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagNameGet
 <LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSEventNameGet
 <LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskNameGet
 <LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemNameGet
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 
 <P><STRONG><a name="[114]"></a>OSEventNameGet</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, os_core.o(.text), UNUSED)
@@ -2035,7 +2117,11 @@ Global Symbols
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Restore
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[11d]"></a>OS_EventTaskRemoveMulti</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, os_core.o(.text))
+=======
 <P><STRONG><a name="[11e]"></a>OS_EventTaskRemoveMulti</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, os_core.o(.text))
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = OS_EventTaskRemoveMulti
 </UL>
 <BR>[Called By]<UL><LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_EventTaskRdy
@@ -2047,6 +2133,39 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
 <LI>Call Chain = OS_Sched
 </UL>
+<<<<<<< HEAD
+<BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Save
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Restore
+<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSCtxSw
+<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedNew
+</UL>
+<BR>[Called By]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPostOpt
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPendAbort
+<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPend
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxDel
+<LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagPend
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagDel
+<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSuspend
+<LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
+<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSEventPendMulti
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreateExt
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPost
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPost
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagPost
+<LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDlyResume
+<LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
+<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskChangePrio
+<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPendAbort
+<LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemDel
+</UL>
+
+<P><STRONG><a name="[11c]"></a>OS_EventTaskWaitMulti</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, os_core.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSEventPendMulti
+=======
 <BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Save
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Restore
 <LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSCtxSw
@@ -2078,6 +2197,7 @@ Global Symbols
 
 <P><STRONG><a name="[11d]"></a>OS_EventTaskWaitMulti</STRONG> (Thumb, 88 bytes, Stack size 16 bytes, os_core.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSEventPendMulti
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 
 <P><STRONG><a name="[11c]"></a>OSEventPendMulti</STRONG> (Thumb, 410 bytes, Stack size 56 bytes, os_core.o(.text), UNUSED)
@@ -2124,7 +2244,15 @@ Global Symbols
 <LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_InitEventList
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[a5]"></a>OSInit</STRONG> (Thumb, 172 bytes, Stack size 40 bytes, os_core.o(.text))
+=======
+<<<<<<< HEAD
+<P><STRONG><a name="[aa]"></a>OSInit</STRONG> (Thumb, 192 bytes, Stack size 40 bytes, os_core.o(.text))
+=======
+<P><STRONG><a name="[ab]"></a>OSInit</STRONG> (Thumb, 172 bytes, Stack size 40 bytes, os_core.o(.text))
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
+>>>>>>> a6117ff093240cc24cbb064a4bb44f022a23a833
 <BR><BR>[Stack]<UL><LI>Max Depth = 144 + Unknown Stack Size
 <LI>Call Chain = OSInit &rArr; OSTaskCreateExt &rArr; OS_TCBInit
 </UL>
@@ -2211,6 +2339,15 @@ Global Symbols
 <P><STRONG><a name="[136]"></a>OS_EventTaskRemove</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, os_core.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OS_EventTaskRemove
 </UL>
+<<<<<<< HEAD
+<BR>[Called By]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPend
+<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_EventTaskRdy
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
+<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+</UL>
+
+<P><STRONG><a name="[134]"></a>OS_EventTaskRdy</STRONG> (Thumb, 110 bytes, Stack size 20 bytes, os_core.o(.text))
+=======
 <BR>[Called By]<UL><LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_EventTaskRdy
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
 <LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
@@ -2218,13 +2355,35 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[135]"></a>OS_EventTaskRdy</STRONG> (Thumb, 102 bytes, Stack size 20 bytes, os_core.o(.text))
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = OS_EventTaskRdy &rArr; OS_EventTaskRemoveMulti
 </UL>
 <BR>[Calls]<UL><LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_EventTaskRemove
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_EventTaskRemoveMulti
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPost
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPost
+=======
+<<<<<<< HEAD
+<BR>[Called By]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPostOpt
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPendAbort
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxDel
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPost
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPost
+<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPendAbort
+<LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemDel
+</UL>
+
+<P><STRONG><a name="[147]"></a>OS_EventTaskWait</STRONG> (Thumb, 66 bytes, Stack size 12 bytes, os_core.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = OS_EventTaskWait
+</UL>
+<BR>[Called By]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPend
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
+=======
+<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPost
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPost
+>>>>>>> a6117ff093240cc24cbb064a4bb44f022a23a833
 <LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPendAbort
 <LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemDel
 <LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPostOpt
@@ -2237,6 +2396,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
 <LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPend
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 
 <P><STRONG><a name="[145]"></a>OS_EventWaitListInit</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, os_core.o(.text))
@@ -2248,7 +2408,11 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQuery
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[136]"></a>OS_TCBInit</STRONG> (Thumb, 228 bytes, Stack size 40 bytes, os_core.o(.text))
+=======
 <P><STRONG><a name="[137]"></a>OS_TCBInit</STRONG> (Thumb, 230 bytes, Stack size 40 bytes, os_core.o(.text))
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 <BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
 <LI>Call Chain = OS_TCBInit
 </UL>
@@ -2288,11 +2452,19 @@ Global Symbols
 <LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[13c]"></a>OSFlagDel</STRONG> (Thumb, 184 bytes, Stack size 40 bytes, os_flag.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagTaskRdy
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Save
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Restore
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+=======
 <P><STRONG><a name="[13d]"></a>OSFlagDel</STRONG> (Thumb, 182 bytes, Stack size 40 bytes, os_flag.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagTaskRdy
 <LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Save
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Restore
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 
 <P><STRONG><a name="[13e]"></a>OSFlagNameGet</STRONG> (Thumb, 72 bytes, Stack size 24 bytes, os_flag.o(.text), UNUSED)
@@ -2306,12 +2478,21 @@ Global Symbols
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Restore
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[13f]"></a>OSFlagPend</STRONG> (Thumb, 366 bytes, Stack size 64 bytes, os_flag.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagUnlink
+<LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagBlock
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Save
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Restore
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+=======
 <P><STRONG><a name="[140]"></a>OSFlagPend</STRONG> (Thumb, 370 bytes, Stack size 64 bytes, os_flag.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagUnlink
 <LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagBlock
 <LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Save
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Restore
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 
 <P><STRONG><a name="[142]"></a>OSFlagPendGetFlagsRdy</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, os_flag.o(.text), UNUSED)
@@ -2319,7 +2500,15 @@ Global Symbols
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Restore
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[98]"></a>OSFlagPost</STRONG> (Thumb, 212 bytes, Stack size 24 bytes, os_flag.o(.text))
+=======
+<<<<<<< HEAD
+<P><STRONG><a name="[9d]"></a>OSFlagPost</STRONG> (Thumb, 210 bytes, Stack size 24 bytes, os_flag.o(.text))
+=======
+<P><STRONG><a name="[9e]"></a>OSFlagPost</STRONG> (Thumb, 212 bytes, Stack size 24 bytes, os_flag.o(.text))
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
+>>>>>>> a6117ff093240cc24cbb064a4bb44f022a23a833
 <BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
 <LI>Call Chain = OSFlagPost &rArr; OS_Sched
 </UL>
@@ -2360,6 +2549,21 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskStart
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[145]"></a>OSMboxDel</STRONG> (Thumb, 190 bytes, Stack size 32 bytes, os_mbox.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Save
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Restore
+<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_EventTaskRdy
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+</UL>
+
+<P><STRONG><a name="[146]"></a>OSMboxPend</STRONG> (Thumb, 192 bytes, Stack size 32 bytes, os_mbox.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Save
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Restore
+<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_EventTaskWait
+<LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_EventTaskRemove
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+=======
 <P><STRONG><a name="[146]"></a>OSMboxDel</STRONG> (Thumb, 188 bytes, Stack size 32 bytes, os_mbox.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Save
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Restore
@@ -2373,6 +2577,7 @@ Global Symbols
 <LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_EventTaskWait
 <LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_EventTaskRemove
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 
 <P><STRONG><a name="[149]"></a>OSMboxPendAbort</STRONG> (Thumb, 110 bytes, Stack size 24 bytes, os_mbox.o(.text), UNUSED)
@@ -2462,14 +2667,26 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskStart
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[152]"></a>OSSemDel</STRONG> (Thumb, 190 bytes, Stack size 32 bytes, os_sem.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Save
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Restore
+<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_EventTaskRdy
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+=======
 <P><STRONG><a name="[153]"></a>OSSemDel</STRONG> (Thumb, 188 bytes, Stack size 32 bytes, os_sem.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Save
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Restore
 <LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_EventTaskRdy
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[90]"></a>OSSemPend</STRONG> (Thumb, 174 bytes, Stack size 32 bytes, os_sem.o(.text))
+=======
+<P><STRONG><a name="[96]"></a>OSSemPend</STRONG> (Thumb, 170 bytes, Stack size 32 bytes, os_sem.o(.text))
+>>>>>>> a6117ff093240cc24cbb064a4bb44f022a23a833
 <BR><BR>[Stack]<UL><LI>Max Depth = 48 + Unknown Stack Size
 <LI>Call Chain = OSSemPend &rArr; OS_Sched
 </UL>
@@ -2511,10 +2728,17 @@ Global Symbols
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Restore
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[156]"></a>OSTaskChangePrio</STRONG> (Thumb, 318 bytes, Stack size 40 bytes, os_task.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Save
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Restore
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+=======
 <P><STRONG><a name="[157]"></a>OSTaskChangePrio</STRONG> (Thumb, 322 bytes, Stack size 40 bytes, os_task.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Save
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Restore
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 
 <P><STRONG><a name="[b3]"></a>OSTaskCreate</STRONG> (Thumb, 124 bytes, Stack size 40 bytes, os_task.o(.text))
@@ -2587,10 +2811,17 @@ Global Symbols
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[15e]"></a>OSTaskResume</STRONG> (Thumb, 118 bytes, Stack size 8 bytes, os_task.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Save
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Restore
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+=======
 <P><STRONG><a name="[15f]"></a>OSTaskResume</STRONG> (Thumb, 120 bytes, Stack size 8 bytes, os_task.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Save
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Restore
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 
 <P><STRONG><a name="[120]"></a>OSTaskStkChk</STRONG> (Thumb, 94 bytes, Stack size 24 bytes, os_task.o(.text))
@@ -2603,7 +2834,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskStatStkChk
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[122]"></a>OSTaskSuspend</STRONG> (Thumb, 130 bytes, Stack size 16 bytes, os_task.o(.text))
+=======
 <P><STRONG><a name="[123]"></a>OSTaskSuspend</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, os_task.o(.text))
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 <BR><BR>[Stack]<UL><LI>Max Depth = 32 + Unknown Stack Size
 <LI>Call Chain = OSTaskSuspend &rArr; OS_Sched
 </UL>
@@ -2657,7 +2892,15 @@ Global Symbols
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatInit
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[92]"></a>OSTimeDlyHMSM</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, os_time.o(.text))
+=======
+<<<<<<< HEAD
+<P><STRONG><a name="[95]"></a>OSTimeDlyHMSM</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, os_time.o(.text))
+=======
+<P><STRONG><a name="[98]"></a>OSTimeDlyHMSM</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, os_time.o(.text))
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
+>>>>>>> a6117ff093240cc24cbb064a4bb44f022a23a833
 <BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
 <LI>Call Chain = OSTimeDlyHMSM &rArr; OSTimeDly &rArr; OS_Sched
 </UL>
@@ -2670,10 +2913,17 @@ Global Symbols
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HeartBeat
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[165]"></a>OSTimeDlyResume</STRONG> (Thumb, 132 bytes, Stack size 8 bytes, os_time.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Save
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Restore
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+=======
 <P><STRONG><a name="[166]"></a>OSTimeDlyResume</STRONG> (Thumb, 134 bytes, Stack size 8 bytes, os_time.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Save
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SR_Restore
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 
 <P><STRONG><a name="[167]"></a>OSTimeGet</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, os_time.o(.text), UNUSED)
@@ -2694,6 +2944,40 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSwHook
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[114]"></a>OS_CPU_SR_Save</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, os_cpu_a.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemQuery
+<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemPut
+<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemNameSet
+<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemNameGet
+<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemGet
+<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemCreate
+<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxQuery
+<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPostOpt
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPendAbort
+<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPend
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxDel
+<LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxAccept
+<LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagQuery
+<LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagPendGetFlagsRdy
+<LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagPend
+<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagNameSet
+<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagNameGet
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagDel
+<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSuspend
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskStkChk
+<LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TCBInit
+<LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeTick
+<LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
+<LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedLock
+<LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskIdle
+<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskStat
+<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSEventPendMulti
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSEventNameSet
+<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSEventNameGet
+=======
 <P><STRONG><a name="[115]"></a>OS_CPU_SR_Save</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, os_cpu_a.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagQuery
 <LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagPendGetFlagsRdy
@@ -2714,8 +2998,10 @@ Global Symbols
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
 <LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSEventNameSet
 <LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSEventNameGet
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 <LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SysTickHandler
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
+<<<<<<< HEAD
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskNameSet
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreateExt
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
@@ -2728,6 +3014,79 @@ Global Symbols
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagPost
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagCreate
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagAccept
+=======
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskNameSet
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreateExt
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatInit
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPost
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
+<<<<<<< HEAD
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPost
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxCreate
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagPost
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagCreate
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagAccept
+<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeSet
+<LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeGet
+<LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDlyResume
+<LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskRegSet
+<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskRegGetID
+<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskRegGet
+<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQuery
+<LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
+<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskNameGet
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDelReq
+<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskChangePrio
+<LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemSet
+<LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemQuery
+<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPendAbort
+<LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemDel
+<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemAccept
+</UL>
+
+<P><STRONG><a name="[116]"></a>OS_CPU_SR_Restore</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, os_cpu_a.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemQuery
+<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemPut
+<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemNameSet
+<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemNameGet
+<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemGet
+<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemCreate
+<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxQuery
+<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPostOpt
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPendAbort
+<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPend
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxDel
+<LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxAccept
+<LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagQuery
+<LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagPendGetFlagsRdy
+<LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagPend
+<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagNameSet
+<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagNameGet
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagDel
+<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSuspend
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskStkChk
+<LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TCBInit
+<LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeTick
+<LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
+<LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedLock
+<LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskIdle
+<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskStat
+<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSEventPendMulti
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSEventNameSet
+<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSEventNameGet
+=======
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPost
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxCreate
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagPost
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagCreate
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagAccept
+>>>>>>> a6117ff093240cc24cbb064a4bb44f022a23a833
 <LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeSet
 <LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeGet
 <LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDlyResume
@@ -2779,8 +3138,10 @@ Global Symbols
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
 <LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSEventNameSet
 <LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSEventNameGet
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 <LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SysTickHandler
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
+<<<<<<< HEAD
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskNameSet
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreateExt
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
@@ -2793,6 +3154,57 @@ Global Symbols
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagPost
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagCreate
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagAccept
+=======
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskNameSet
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreateExt
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatInit
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPost
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
+<<<<<<< HEAD
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPost
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxCreate
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagPost
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagCreate
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagAccept
+<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeSet
+<LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeGet
+<LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDlyResume
+<LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskRegSet
+<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskRegGetID
+<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskRegGet
+<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQuery
+<LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
+<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskNameGet
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDelReq
+<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskChangePrio
+<LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemSet
+<LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemQuery
+<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPendAbort
+<LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemDel
+<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemAccept
+</UL>
+
+<P><STRONG><a name="[131]"></a>OSStartHighRdy</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, os_cpu_a.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStart
+</UL>
+
+<P><STRONG><a name="[11a]"></a>OSCtxSw</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, os_cpu_a.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+</UL>
+
+<P><STRONG><a name="[12e]"></a>OSIntCtxSw</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, os_cpu_a.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
+=======
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxPost
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMboxCreate
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagPost
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagCreate
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagAccept
+>>>>>>> a6117ff093240cc24cbb064a4bb44f022a23a833
 <LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeSet
 <LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeGet
 <LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDlyResume
@@ -2834,6 +3246,7 @@ Global Symbols
 
 <P><STRONG><a name="[12f]"></a>OSIntCtxSw</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, os_cpu_a.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 
 <P><STRONG><a name="[7]"></a>OS_CPU_PendSVHandler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, os_cpu_a.o(.text))
@@ -2877,7 +3290,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskStat
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[157]"></a>OSTaskStkInit</STRONG> (Thumb, 320 bytes, Stack size 8 bytes, os_cpu_c.o(.text))
+=======
 <P><STRONG><a name="[158]"></a>OSTaskStkInit</STRONG> (Thumb, 322 bytes, Stack size 8 bytes, os_cpu_c.o(.text))
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OSTaskStkInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreateExt
@@ -2954,7 +3371,15 @@ Global Symbols
 
 <P><STRONG><a name="[1cb]"></a>GPIOIntTypeSet</STRONG> (Thumb, 78 bytes, Stack size 0 bytes, gpio.o(.text), UNUSED)
 
+<<<<<<< HEAD
 <P><STRONG><a name="[1cc]"></a>GPIOIntTypeGet</STRONG> (Thumb, 68 bytes, Stack size 12 bytes, gpio.o(.text), UNUSED)
+=======
+<<<<<<< HEAD
+<P><STRONG><a name="[1c8]"></a>GPIOIntTypeGet</STRONG> (Thumb, 66 bytes, Stack size 12 bytes, gpio.o(.text), UNUSED)
+=======
+<P><STRONG><a name="[1c9]"></a>GPIOIntTypeGet</STRONG> (Thumb, 68 bytes, Stack size 12 bytes, gpio.o(.text), UNUSED)
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
+>>>>>>> a6117ff093240cc24cbb064a4bb44f022a23a833
 
 <P><STRONG><a name="[bd]"></a>GPIOPadConfigSet</STRONG> (Thumb, 164 bytes, Stack size 8 bytes, gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GPIOPadConfigSet
@@ -2986,9 +3411,21 @@ Global Symbols
 
 <P><STRONG><a name="[1cd]"></a>GPIOPadConfigGet</STRONG> (Thumb, 110 bytes, Stack size 12 bytes, gpio.o(.text), UNUSED)
 
+<<<<<<< HEAD
 <P><STRONG><a name="[1ce]"></a>GPIOIntEnable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, gpio.o(.text), UNUSED)
 
 <P><STRONG><a name="[1cf]"></a>GPIOIntDisable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, gpio.o(.text), UNUSED)
+=======
+<<<<<<< HEAD
+<P><STRONG><a name="[1ca]"></a>GPIOIntEnable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, gpio.o(.text), UNUSED)
+
+<P><STRONG><a name="[1cb]"></a>GPIOIntDisable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, gpio.o(.text), UNUSED)
+=======
+<P><STRONG><a name="[1cb]"></a>GPIOIntEnable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, gpio.o(.text), UNUSED)
+
+<P><STRONG><a name="[1cc]"></a>GPIOIntDisable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, gpio.o(.text), UNUSED)
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
+>>>>>>> a6117ff093240cc24cbb064a4bb44f022a23a833
 
 <P><STRONG><a name="[1d0]"></a>GPIOIntStatus</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, gpio.o(.text), UNUSED)
 
@@ -3130,19 +3567,45 @@ Global Symbols
 <LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIODirModeSet
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[b8]"></a>GPIOPinConfigure</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, gpio.o(.text))
+=======
+<<<<<<< HEAD
+<P><STRONG><a name="[b5]"></a>GPIOPinConfigure</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, gpio.o(.text))
+=======
+<P><STRONG><a name="[b6]"></a>GPIOPinConfigure</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, gpio.o(.text))
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
+>>>>>>> a6117ff093240cc24cbb064a4bb44f022a23a833
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GPIOPinConfigure
 </UL>
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_Init
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[1d3]"></a>GPIODMATriggerEnable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, gpio.o(.text), UNUSED)
+=======
+<<<<<<< HEAD
+<P><STRONG><a name="[1cf]"></a>GPIODMATriggerEnable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, gpio.o(.text), UNUSED)
+
+<P><STRONG><a name="[1d0]"></a>GPIODMATriggerDisable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, gpio.o(.text), UNUSED)
+
+<P><STRONG><a name="[1d1]"></a>GPIOADCTriggerEnable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, gpio.o(.text), UNUSED)
+
+<P><STRONG><a name="[1d2]"></a>GPIOADCTriggerDisable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, gpio.o(.text), UNUSED)
+=======
+<P><STRONG><a name="[1d0]"></a>GPIODMATriggerEnable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, gpio.o(.text), UNUSED)
+>>>>>>> a6117ff093240cc24cbb064a4bb44f022a23a833
 
 <P><STRONG><a name="[1d4]"></a>GPIODMATriggerDisable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, gpio.o(.text), UNUSED)
 
 <P><STRONG><a name="[1d5]"></a>GPIOADCTriggerEnable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, gpio.o(.text), UNUSED)
 
+<<<<<<< HEAD
 <P><STRONG><a name="[1d6]"></a>GPIOADCTriggerDisable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, gpio.o(.text), UNUSED)
+=======
+<P><STRONG><a name="[1d3]"></a>GPIOADCTriggerDisable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, gpio.o(.text), UNUSED)
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
+>>>>>>> a6117ff093240cc24cbb064a4bb44f022a23a833
 
 <P><STRONG><a name="[18f]"></a>IntMasterEnable</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, interrupt.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPUcpsie
@@ -3152,6 +3615,18 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPUcpsid
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[174]"></a>IntRegister</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, interrupt.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlIntRegister
+<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntRegister
+<LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTIntRegister
+</UL>
+
+<P><STRONG><a name="[178]"></a>IntUnregister</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, interrupt.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlIntUnregister
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntUnregister
+<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTIntUnregister
+=======
 <P><STRONG><a name="[175]"></a>IntRegister</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, interrupt.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntRegister
 <LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTIntRegister
@@ -3162,6 +3637,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntUnregister
 <LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTIntUnregister
 <LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlIntUnregister
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 
 <P><STRONG><a name="[1d7]"></a>IntPriorityGroupingSet</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, interrupt.o(.text), UNUSED)
@@ -3172,6 +3648,18 @@ Global Symbols
 
 <P><STRONG><a name="[1da]"></a>IntPriorityGet</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, interrupt.o(.text), UNUSED)
 
+<<<<<<< HEAD
+<P><STRONG><a name="[175]"></a>IntEnable</STRONG> (Thumb, 88 bytes, Stack size 0 bytes, interrupt.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlIntRegister
+<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntRegister
+<LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTIntRegister
+</UL>
+
+<P><STRONG><a name="[177]"></a>IntDisable</STRONG> (Thumb, 88 bytes, Stack size 0 bytes, interrupt.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlIntUnregister
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntUnregister
+<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTIntUnregister
+=======
 <P><STRONG><a name="[176]"></a>IntEnable</STRONG> (Thumb, 88 bytes, Stack size 0 bytes, interrupt.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntRegister
 <LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTIntRegister
@@ -3182,6 +3670,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntUnregister
 <LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTIntUnregister
 <LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlIntUnregister
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 
 <P><STRONG><a name="[1db]"></a>IntIsEnabled</STRONG> (Thumb, 90 bytes, Stack size 0 bytes, interrupt.o(.text), UNUSED)
@@ -3277,20 +3766,44 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_SysInit
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[ba]"></a>SysCtlClockGet</STRONG> (Thumb, 274 bytes, Stack size 12 bytes, sysctl.o(.text))
+=======
+<<<<<<< HEAD
+<P><STRONG><a name="[b7]"></a>SysCtlClockGet</STRONG> (Thumb, 284 bytes, Stack size 12 bytes, sysctl.o(.text))
+=======
+<P><STRONG><a name="[b8]"></a>SysCtlClockGet</STRONG> (Thumb, 274 bytes, Stack size 12 bytes, sysctl.o(.text))
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
+>>>>>>> a6117ff093240cc24cbb064a4bb44f022a23a833
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = SysCtlClockGet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_SysClkFreqGet
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_Init
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[1f4]"></a>SysCtlDeepSleepClockSet</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, sysctl.o(.text), UNUSED)
+=======
+<<<<<<< HEAD
+<P><STRONG><a name="[1f0]"></a>SysCtlDeepSleepClockSet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, sysctl.o(.text), UNUSED)
+=======
+<P><STRONG><a name="[1f1]"></a>SysCtlDeepSleepClockSet</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, sysctl.o(.text), UNUSED)
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
+>>>>>>> a6117ff093240cc24cbb064a4bb44f022a23a833
 
 <P><STRONG><a name="[1f5]"></a>SysCtlPWMClockSet</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, sysctl.o(.text), UNUSED)
 
 <P><STRONG><a name="[1f6]"></a>SysCtlPWMClockGet</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, sysctl.o(.text), UNUSED)
 
+<<<<<<< HEAD
 <P><STRONG><a name="[1f7]"></a>SysCtlADCSpeedSet</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, sysctl.o(.text), UNUSED)
+=======
+<<<<<<< HEAD
+<P><STRONG><a name="[1f3]"></a>SysCtlADCSpeedSet</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, sysctl.o(.text), UNUSED)
+=======
+<P><STRONG><a name="[1f4]"></a>SysCtlADCSpeedSet</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, sysctl.o(.text), UNUSED)
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
+>>>>>>> a6117ff093240cc24cbb064a4bb44f022a23a833
 
 <P><STRONG><a name="[1f8]"></a>SysCtlADCSpeedGet</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, sysctl.o(.text), UNUSED)
 
@@ -3332,7 +3845,15 @@ Global Symbols
 <LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTStdioConfig
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[201]"></a>UARTConfigGetExpClk</STRONG> (Thumb, 38 bytes, Stack size 12 bytes, uart.o(.text), UNUSED)
+=======
+<<<<<<< HEAD
+<P><STRONG><a name="[1fd]"></a>UARTConfigGetExpClk</STRONG> (Thumb, 40 bytes, Stack size 12 bytes, uart.o(.text), UNUSED)
+=======
+<P><STRONG><a name="[1fe]"></a>UARTConfigGetExpClk</STRONG> (Thumb, 38 bytes, Stack size 12 bytes, uart.o(.text), UNUSED)
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
+>>>>>>> a6117ff093240cc24cbb064a4bb44f022a23a833
 
 <P><STRONG><a name="[202]"></a>UARTFIFOEnable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, uart.o(.text), UNUSED)
 
@@ -3436,11 +3957,30 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART9BitAddrSend
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[1a4]"></a>UARTStdioConfig</STRONG> (Thumb, 70 bytes, Stack size 24 bytes, uartstdio.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTConfigSetExpClk
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralEnable
 <LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTEnable
 <LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralPresent
+=======
+<P><STRONG><a name="[ba]"></a>UARTStdioConfig</STRONG> (Thumb, 70 bytes, Stack size 24 bytes, uartstdio.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = UARTStdioConfig &rArr; UARTConfigSetExpClk
+</UL>
+<<<<<<< HEAD
+<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTConfigSetExpClk
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralEnable
+<LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralPresent
+<LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTEnable
+=======
+<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTConfigSetExpClk
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralEnable
+<LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTEnable
+<LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralPresent
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
+</UL>
+<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_Init
+>>>>>>> a6117ff093240cc24cbb064a4bb44f022a23a833
 </UL>
 
 <P><STRONG><a name="[1a6]"></a>UARTwrite</STRONG> (Thumb, 46 bytes, Stack size 24 bytes, uartstdio.o(.text))
@@ -3652,24 +4192,47 @@ Local Symbols
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_PoolBlkFree
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[107]"></a>Str_FmtNbr_Int32</STRONG> (Thumb, 338 bytes, Stack size 56 bytes, lib_str.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ASCII_IsPrint
+=======
 <P><STRONG><a name="[108]"></a>Str_FmtNbr_Int32</STRONG> (Thumb, 344 bytes, Stack size 56 bytes, lib_str.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ASCII_IsPrint
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 <BR>[Called By]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Str_FmtNbr_Int32S
 <LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Str_FmtNbr_Int32U
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[10b]"></a>Str_ParseNbr_Int32</STRONG> (Thumb, 308 bytes, Stack size 56 bytes, lib_str.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ASCII_IsSpace
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ASCII_IsDigHex
+<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ASCII_IsDig
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ASCII_IsLower
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ASCII_IsAlphaNum
+=======
 <P><STRONG><a name="[10c]"></a>Str_ParseNbr_Int32</STRONG> (Thumb, 314 bytes, Stack size 56 bytes, lib_str.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ASCII_IsSpace
 <LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ASCII_IsDigHex
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ASCII_IsDig
 <LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ASCII_IsLower
 <LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ASCII_IsAlphaNum
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 <BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Str_ParseNbr_Int32S
 <LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Str_ParseNbr_Int32U
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[119]"></a>OS_SchedNew</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, os_core.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStart
+</UL>
+
+<P><STRONG><a name="[129]"></a>OS_InitEventList</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, os_core.o(.text))
+=======
 <P><STRONG><a name="[11a]"></a>OS_SchedNew</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, os_core.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
@@ -3677,6 +4240,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[12a]"></a>OS_InitEventList</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, os_core.o(.text))
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OS_InitEventList
 </UL>
 <BR>[Calls]<UL><LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MemClr
@@ -3684,7 +4248,11 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[128]"></a>OS_InitTCBList</STRONG> (Thumb, 100 bytes, Stack size 8 bytes, os_core.o(.text))
+=======
 <P><STRONG><a name="[129]"></a>OS_InitTCBList</STRONG> (Thumb, 96 bytes, Stack size 8 bytes, os_core.o(.text))
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OS_InitTCBList
 </UL>
 <BR>[Calls]<UL><LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MemClr
@@ -3696,7 +4264,11 @@ Local Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[13a]"></a>OS_FlagTaskRdy</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, os_flag.o(.text))
+=======
 <P><STRONG><a name="[13b]"></a>OS_FlagTaskRdy</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, os_flag.o(.text))
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OS_FlagTaskRdy
 </UL>
 <BR>[Calls]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagUnlink
@@ -3705,8 +4277,13 @@ Local Symbols
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagPost
 </UL>
 
+<<<<<<< HEAD
+<P><STRONG><a name="[140]"></a>OS_FlagBlock</STRONG> (Thumb, 84 bytes, Stack size 20 bytes, os_flag.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagPend
+=======
 <P><STRONG><a name="[141]"></a>OS_FlagBlock</STRONG> (Thumb, 86 bytes, Stack size 20 bytes, os_flag.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSFlagPend
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
 </UL>
 
 <P><STRONG><a name="[174]"></a>_GPIOIntNumberGet</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, gpio.o(.text), UNUSED)
@@ -3726,8 +4303,20 @@ Local Symbols
 <LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTIntRegister
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[1ad]"></a>_printf_core</STRONG> (Thumb, 34 bytes, Stack size 24 bytes, printfb.o(i._printf_core), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sprintf$bare
+=======
+<<<<<<< HEAD
+<P><STRONG><a name="[1aa]"></a>_printf_core</STRONG> (Thumb, 334 bytes, Stack size 88 bytes, printf1.o(i._printf_core), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+=======
+<P><STRONG><a name="[1ab]"></a>_printf_core</STRONG> (Thumb, 336 bytes, Stack size 88 bytes, printf1.o(i._printf_core), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+>>>>>>> 55b86a648dcec038cec82e7502a339f40fe0617e
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sprintf$1
+>>>>>>> a6117ff093240cc24cbb064a4bb44f022a23a833
 </UL>
 
 <P><STRONG><a name="[85]"></a>_sputc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, printfb.o(i._sputc))

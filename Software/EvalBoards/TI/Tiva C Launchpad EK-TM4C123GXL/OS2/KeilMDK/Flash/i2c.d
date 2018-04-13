@@ -1,6 +1,6 @@
 .\flash\i2c.o: ..\..\BSP\driverlib\i2c.c
-.\flash\i2c.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\flash\i2c.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\flash\i2c.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\flash\i2c.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\flash\i2c.o: ..\..\BSP\inc/hw_i2c.h
 .\flash\i2c.o: ..\..\BSP\inc/hw_ints.h
 .\flash\i2c.o: ..\..\BSP\inc/hw_memmap.h

@@ -1,7 +1,7 @@
 .\flash\uartstdio.o: ..\..\BSP\utils\uartstdio.c
-.\flash\uartstdio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\flash\uartstdio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\flash\uartstdio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\flash\uartstdio.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\flash\uartstdio.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\flash\uartstdio.o: C:\Keil\ARM\ARMCC\bin\..\include\stdarg.h
 .\flash\uartstdio.o: ..\..\BSP\inc/hw_ints.h
 .\flash\uartstdio.o: ..\..\BSP\inc/hw_memmap.h
 .\flash\uartstdio.o: ..\..\BSP\inc/hw_types.h
