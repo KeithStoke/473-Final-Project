@@ -312,7 +312,7 @@ OSTaskCreate((void (*)(void *)) Task2,
 OSTaskCreate((void (*)(void *)) HeartBeat,         
                     (void           *) 0,							// argument
                     (OS_STK         *)&BeatStk[APP_CFG_TASK_START_STK_SIZE - 1],
-                    (INT8U           ) 9 );  						// Task Priority	
+                    (INT8U           ) 12 );  						// Task Priority	
 											
 
 																		
@@ -442,31 +442,34 @@ void printColumn1()
 	returnTable(5);
 }
 
+
+
 void printColumn2()
 {
 	
 	
 	int linecnt = 0;
 	curEVT = &OSEventTbl[column2TCB];
+	//curEVT = &myGroup;
 	UARTprintf("\n");
 	linecnt++;
 	tabOver(2);
-	UARTprintf("Event Group\n");
+	UARTprintf("Event Number\n");
 	linecnt++;
 	tabOver(2);
-	UARTprintf("%3d\n",curEVT->OSEventGrp);
+	UARTprintf("%3d\n",column2TCB);
 	linecnt++;
 	tabOver(2);
-	UARTprintf("\nEvent Type\n");
+	UARTprintf("Event Type\n");
 	tabOver(2);
-	linecnt+=2;
+	linecnt++;
 	if(curEVT->OSEventType == OS_EVENT_TYPE_FLAG)
 	{
 		UARTprintf("Event Flag");
 	}
 	else if(curEVT->OSEventType == OS_EVENT_TYPE_MBOX)
 	{
-		UARTprintf("Mailbox");
+		UARTprintf("  Mailbox");
 	}
 	else if(curEVT->OSEventType == OS_EVENT_TYPE_SEM)
 	{
@@ -474,7 +477,7 @@ void printColumn2()
 	}
 	else if(curEVT->OSEventType == OS_EVENT_TYPE_MUTEX)
 	{
-		UARTprintf("Mutex");
+		UARTprintf("    Mutex");
 	}
 	
 	UARTprintf("\n");
@@ -483,6 +486,11 @@ void printColumn2()
 	UARTprintf("Tasks waiting\n");
 	tabOver(2);
 	linecnt++;
+	
+	UARTprintf("\n\n\n");
+	linecnt+=3;
+	tabOver(2);
+	UARTprintf("<--A       Q-->");
 	returnTable(linecnt);
 }
 
@@ -492,6 +500,8 @@ void printColumn3()
 	int linecnt = 0;
 	int i;
 	curTCB = firstTCB; //Pointer to the First User Entry of the TCB table
+	
+	
 	
 	UARTprintf("\n");
 	linecnt++;
@@ -506,7 +516,7 @@ void printColumn3()
 		if(curTCB->OSTCBStat == OS_STAT_RDY)
 		{
 			tabOver(4);
-			UARTprintf("%d\n",curTCB->OSTCBPrio);
+			UARTprintf("%3d\n",curTCB->OSTCBPrio);
 			linecnt++;
 		}
 		curTCB = curTCB->OSTCBNext;
@@ -525,7 +535,7 @@ void printColumn3()
 		if(curTCB->OSTCBStat == OS_STAT_PEND_ANY)
 		{
 			tabOver(4);
-			UARTprintf("%d\n",curTCB->OSTCBPrio);
+			UARTprintf("%3d\n",curTCB->OSTCBPrio);
 			linecnt++;
 		}
 		curTCB = curTCB->OSTCBNext;
@@ -543,7 +553,7 @@ void printColumn3()
 		if(curTCB->OSTCBStat == OS_STAT_SUSPEND)
 		{
 			tabOver(4);
-			UARTprintf("%d\n",curTCB->OSTCBPrio);
+			UARTprintf("%3d\n",curTCB->OSTCBPrio);
 			linecnt++;
 		}
 		curTCB = curTCB->OSTCBNext;
@@ -572,7 +582,10 @@ void printColumn4()
 	UARTprintf("\n");
 	tabOver(6);
 	UARTprintf("%10d",curTCB->OSTCBCtxSwCtr);
-	returnTable(5);
+	UARTprintf("\n\n\n\n");
+	tabOver(6);
+	UARTprintf("<--S       W-->");
+	returnTable(9);
 			}
 }
 
@@ -596,7 +609,10 @@ void printColumn5()
 	UARTprintf("\n");
 	tabOver(8);
 	UARTprintf("%10d",curTCB->OSTCBCtxSwCtr);
-	returnTable(5);
+	UARTprintf("\n\n\n\n");
+	tabOver(8);
+	UARTprintf("<--F      R-->");
+	returnTable(9);
 			}
 }
 
@@ -604,21 +620,6 @@ void printClms()
 {
 	//Prints the column outlines
 	int i,j;
-	/*
-	UARTprintf("Button 1 pressed\n");
-	UARTprintf("\x07 bell tone\n");
-	UARTprintf("\n\n\n\n\n");
-	UARTprintf("Line 1");
-	UARTprintf("\n\x1bM\x1bMLine 2");
-	UARTprintf("\x1bM\x1bMLine 3");
-	UARTprintf("\x0dLine 4");
-	UARTprintf("\x09Line 5");
-	UARTprintf("\x09Line 6");
-	UARTprintf("\x0b\x0b\x0bLine 7");
-	UARTprintf("\n\x1bM\x1bM\x1bM\x1bM\x1bM\x1bM\x1bM\x1bM\x1bM\x1bMLine 8");
-	*/
-	//UARTStdioConfig(4, 921600, BSP_SysClkFreqGet());
-	//UARTStdioConfig(0, 921600, BSP_SysClkFreqGet());
 	for(j=0;j<5;j++)
 	{
 		
@@ -681,6 +682,7 @@ void chkUART()
 			break;
 			
 			case 'a':
+				if(column2TCB >0)
 				column2TCB--;
 			break;
 			
@@ -688,18 +690,27 @@ void chkUART()
 	}
 }
 
-
+void clearScreen()
+{
+	int i;
+	for(i=0;i<30;i++)
+	{
+		UARTprintf("\n");
+	}
+}
 static  void  SerialTerminal (void *p_arg)
 {
 	char str[16];
    (void)p_arg;
-
+	clearScreen();
     while (1) 
-			{            				
+			{
+				//OSSemPend(mySem,0,0);
 				printClms();
 				chkUART();
 				//sprintf(str,"Hello World");
 				//myUPrintf(str);
-				OSTimeDlyHMSM(0, 0, 0, 10);
+				//OSTimeDlyHMSM(0, 0, 0, 10);
+				//OSSemPost(mySem,0,0);
 			}
 }
