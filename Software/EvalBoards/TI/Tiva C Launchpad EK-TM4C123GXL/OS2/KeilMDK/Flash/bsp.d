@@ -5,13 +5,13 @@
 .\flash\bsp.o: ..\cpu_cfg.h
 .\flash\bsp.o: ..\..\BSP\..\bsp\bsp_led.h
 .\flash\bsp.o: ..\..\BSP\..\bsp\bsp_int.h
-.\flash\bsp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\flash\bsp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\flash\bsp.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\flash\bsp.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\flash\bsp.o: ..\..\BSP\inc/hw_memmap.h
 .\flash\bsp.o: ..\..\BSP\driverlib/gpio.h
 .\flash\bsp.o: ..\..\BSP\driverlib/pin_map.h
 .\flash\bsp.o: ..\..\BSP\driverlib/sysctl.h
 .\flash\bsp.o: ..\..\BSP\driverlib/uart.h
 .\flash\bsp.o: ..\..\BSP\utils/uartstdio.h
-.\flash\bsp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
-.\flash\bsp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\flash\bsp.o: C:\Keil\ARM\ARMCC\bin\..\include\stdarg.h
+.\flash\bsp.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h

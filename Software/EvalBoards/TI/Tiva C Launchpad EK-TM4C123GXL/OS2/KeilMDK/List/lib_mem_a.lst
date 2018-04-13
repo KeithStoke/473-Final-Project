@@ -443,13 +443,11 @@ ARM Macro Assembler    Page 7
   309 00000220         
   310 00000220         
   311 00000220                 END
-Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
-erwork --depend=.\flash\lib_mem_a.d -o.\flash\lib_mem_a.o -I.\RTE\_FLASH -IC:\K
-eil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123 -IC:\Keil_v5\ARM\CMS
-IS\Include --predefine="__EVAL SETA 1" --predefine="__MICROLIB SETA 1" --predef
-ine="__UVISION_VERSION SETA 524" --predefine="TM4C123GH6PM SETA 1" --list=.\lis
-t\lib_mem_a.lst ..\..\..\..\..\uC-LIB\Ports\ARM-Cortex-M4\RealView\lib_mem_a.as
-m
+Command Line: --debug --xref --cpu=Cortex-M4.fp --apcs=interwork --depend=.\fla
+sh\lib_mem_a.d -o.\flash\lib_mem_a.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS
+\Include -IC:\Keil\ARM\Inc\TI\TM4C123 --predefine="__EVAL SETA 1" --predefine="
+__MICROLIB SETA 1" --list=.\list\lib_mem_a.lst ..\..\..\..\..\uC-LIB\Ports\ARM-
+Cortex-M4\RealView\lib_mem_a.asm
 
 
 
@@ -675,4 +673,4 @@ b_mem_a.asm
 b_mem_a.asm
 
 18 symbols
-353 symbols in table
+351 symbols in table

@@ -5,6 +5,6 @@
 .\flash\bsp_sys.o: ..\..\..\..\..\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
 .\flash\bsp_sys.o: ..\cpu_cfg.h
 .\flash\bsp_sys.o: ..\..\BSP\..\bsp\bsp_sys.h
-.\flash\bsp_sys.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\flash\bsp_sys.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\flash\bsp_sys.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\flash\bsp_sys.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\flash\bsp_sys.o: ..\..\BSP\driverlib/sysctl.h

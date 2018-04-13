@@ -1,6 +1,6 @@
 .\flash\comp.o: ..\..\BSP\driverlib\comp.c
-.\flash\comp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\flash\comp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\flash\comp.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\flash\comp.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\flash\comp.o: ..\..\BSP\inc/hw_comp.h
 .\flash\comp.o: ..\..\BSP\inc/hw_ints.h
 .\flash\comp.o: ..\..\BSP\inc/hw_memmap.h

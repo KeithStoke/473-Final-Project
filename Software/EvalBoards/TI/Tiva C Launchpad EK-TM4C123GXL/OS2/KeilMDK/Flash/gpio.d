@@ -1,6 +1,6 @@
 .\flash\gpio.o: ..\..\BSP\driverlib\gpio.c
-.\flash\gpio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\flash\gpio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\flash\gpio.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\flash\gpio.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\flash\gpio.o: ..\..\BSP\inc/hw_gpio.h
 .\flash\gpio.o: ..\..\BSP\inc/hw_ints.h
 .\flash\gpio.o: ..\..\BSP\inc/hw_memmap.h
