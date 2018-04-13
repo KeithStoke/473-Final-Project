@@ -28,3 +28,4 @@
 .\flash\app.o: ..\..\BSP\driverlib/uart.h
 .\flash\app.o: ..\..\BSP\utils/uartstdio.h
 .\flash\app.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\flash\app.o: ..\..\BSP\inc/tm4c123gh6pm.h

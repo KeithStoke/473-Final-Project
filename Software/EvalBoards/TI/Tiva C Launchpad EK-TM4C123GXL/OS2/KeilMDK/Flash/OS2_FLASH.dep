@@ -1,5 +1,5 @@
 Dependencies for Project 'OS2', Target 'FLASH': (DO NOT MODIFY !)
-F (..\app.c)(0x5ACE40DB)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork -I ..\ -I ..\..\BSP -I ..\..\..\..\..\uC-CPU -I ..\..\..\..\..\uC-CPU\ARM-Cortex-M4\RealView -I ..\..\..\..\..\uC-LIB -I ..\..\..\..\..\uCOS-II\Ports\ARM-Cortex-M4\Generic\RealView -I ..\..\..\..\..\uCOS-II\Source-I.\RTE\_FLASH-IC:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DTM4C123GH6PM-o .\flash\app.o --omf_browse .\flash\app.crf --depend .\flash\app.d)
+F (..\app.c)(0x5AD0E739)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork -I ..\ -I ..\..\BSP -I ..\..\..\..\..\uC-CPU -I ..\..\..\..\..\uC-CPU\ARM-Cortex-M4\RealView -I ..\..\..\..\..\uC-LIB -I ..\..\..\..\..\uCOS-II\Ports\ARM-Cortex-M4\Generic\RealView -I ..\..\..\..\..\uCOS-II\Source-I.\RTE\_FLASH-IC:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DTM4C123GH6PM-o .\flash\app.o --omf_browse .\flash\app.crf --depend .\flash\app.d)
 I (..\app_cfg.h)(0x5AC794F7)
 I (..\..\..\..\..\uC-CPU\cpu_core.h)(0x5AC794FA)
 I (..\..\..\..\..\uC-CPU\ARM-Cortex-M4\RealView\cpu.h)(0x5AC794FB)
@@ -28,6 +28,7 @@ I (..\..\BSP\driverlib/sysctl.h)(0x5AC794E5)
 I (..\..\BSP\driverlib/uart.h)(0x5AC794E5)
 I (..\..\BSP\utils/uartstdio.h)(0x5AC794F7)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x588C3A14)
+I (..\..\BSP\inc/tm4c123gh6pm.h)(0x5AC794E6)
 F (..\app_cfg.h)(0x5AC794F7)()
 F (..\bsp_cfg.h)(0x5AC794F7)()
 F (..\cpu_cfg.h)(0x5AC794F7)()
@@ -39,7 +40,7 @@ I (..\..\..\..\..\uCOS-II\Source\ucos_ii.h)(0x5AC794FB)
 I (..\app_cfg.h)(0x5AC794F7)
 I (..\os_cfg.h)(0x5AC794F7)
 I (..\..\..\..\..\uCOS-II\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x5AC794FB)
-F (..\..\BSP\bsp.c)(0x5ACBA825)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork -I ..\ -I ..\..\BSP -I ..\..\..\..\..\uC-CPU -I ..\..\..\..\..\uC-CPU\ARM-Cortex-M4\RealView -I ..\..\..\..\..\uC-LIB -I ..\..\..\..\..\uCOS-II\Ports\ARM-Cortex-M4\Generic\RealView -I ..\..\..\..\..\uCOS-II\Source-I.\RTE\_FLASH-IC:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DTM4C123GH6PM-o .\flash\bsp.o --omf_browse .\flash\bsp.crf --depend .\flash\bsp.d)
+F (..\..\BSP\bsp.c)(0x5AD0E73A)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork -I ..\ -I ..\..\BSP -I ..\..\..\..\..\uC-CPU -I ..\..\..\..\..\uC-CPU\ARM-Cortex-M4\RealView -I ..\..\..\..\..\uC-LIB -I ..\..\..\..\..\uCOS-II\Ports\ARM-Cortex-M4\Generic\RealView -I ..\..\..\..\..\uCOS-II\Source-I.\RTE\_FLASH-IC:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DTM4C123GH6PM-o .\flash\bsp.o --omf_browse .\flash\bsp.crf --depend .\flash\bsp.d)
 I (..\..\BSP\..\bsp\bsp_sys.h)(0x5AC794E4)
 I (..\..\..\..\..\uC-CPU\ARM-Cortex-M4\RealView\cpu.h)(0x5AC794FB)
 I (..\..\..\..\..\uC-CPU\cpu_def.h)(0x5AC794FA)
